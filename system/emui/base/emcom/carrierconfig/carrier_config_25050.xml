@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <!-- SBERBANK_RU-->
+    <carrier_config>
+        <!--VOWIFI NO TA-->
+        <string name="vowifiHplmnListItem">25050, epdg.epc.mnc050.mcc250.pub.3gppnetwork.org</string>
+        <int name="vowifiRoamingConfig" value="0"/>
+        <boolean name="vowifiStaticUnroaming" value="true"/>
+        <boolean name="vowifiStaticRoaming" value="true"/>
+        <string name="wfc_spn_string">Sberbank RUS</string>
+        <string name="wfc_format_wifi_string">%1$s Wi-Fi</string>
+        <string name="Ikev2EncAlg">RCT_ALG_DES3_CBC</string>
+        <string name="Ikev2DhGroup">RCT_ALG_MODP4096</string>
+        <string name="Ikev2HashAlg">RCT_ALG_HMAC_SHA2_256</string>
+        <string name="Ikev2PrfAlg">RCT_ALG_HMAC_SHA2_512</string>
+        <string name="EspEncAlg">RCT_ALG_AES128_CBC</string>
+        <string name="EspAuthAlg">RCT_ALG_HMAC_SHA1</string>
+    </carrier_config>
+</carrier_config_list>

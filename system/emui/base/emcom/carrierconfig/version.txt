@@ -1,0 +1,4 @@
+version=1.10.17.301
+type=CARRIERCONFIG
+subtype=EMUI6
+compatibleVersion=1

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<policylist>
+<package_policy>
+<package name="com.tencent.gallerymanager"  op="add"/>
+</package_policy>
+<dir_policy>
+<dir path="Pictures" op="add"/>
+<dir path="DCIM" op="add"/>
+<dir path="tencent/MicroMsg/WeiXin" op="add"/>
+</dir_policy>
+</policylist>

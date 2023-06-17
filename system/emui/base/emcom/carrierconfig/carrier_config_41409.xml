@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+
+<carrier_config_list>
+    <!--MYTEL_MM 41409-->
+    <carrier_config>
+        <!--UT NO TA -->
+        <boolean name="utForbiddenWhenVolteSwitchOff" value="true"/>
+        <int name="utUseApn" value="1"/>
+        <int name="callWaitingMode" value="11"/>
+        <string name="utBsfSrvAddr">bsf.ims.mnc009.mcc414.pub.3gppnetwork.org</string>
+        <int name="utBsfPort" value="80"/>
+        <int name="utBearType" value="2"/>
+        <!--VOLTE NO TA-->
+        <boolean name="carrier_default_volte_switch_on_bool" value="true"/>
+        <!--VOWIFI NO TA-->
+        <boolean name="vowifi_ut_switch" value="true"/>
+        <int name="vowifi_mmsut_pdn_type" value="3"/>
+        <boolean name="carrier_default_wfc_ims_enabled_bool" value="false"/>
+        <int name="carrier_default_wfc_ims_mode_int" value="1"/>
+        <string name="vowifiHplmnListItem">41409, epdg.epc.mnc009.mcc414.3gppnetwork.org</string>
+        <string name="Ikev2EncAlg">RCT_ALG_AES128_CBC</string>
+        <string name="Ikev2PrfAlg">RCT_ALG_HMAC_SHA1</string>
+        <string name="Ikev2HashAlg">RCT_ALG_HMAC_SHA1</string>
+        <string name="Ikev2DhGroup">RCT_ALG_MODP1024</string>
+        <string name="EspEncAlg">RCT_ALG_AES128_CBC</string>
+        <string name="EspAuthAlg">RCT_ALG_HMAC_SHA1,RCT_ALG_HMAC_SHA2_256</string>
+        <int name="Ikev2SaLifeTime" value="64800"/>
+        <int name="IPsecSaLifeTime" value="64800"/>
+        <int name="Ikev2IkeSaRekeyTimerSec" value="64800"/>
+        <int name="Ikev2IPsecSaRekeyTimeSec" value="64800"/>
+        <string name="vowifi_UT_APN">mytel-xcap</string>
+        <int name="vowifiRoamingConfig" value="0"/>
+        <boolean name="vowifiStaticUnroaming" value="true"/>
+        <boolean name="vowifiStaticRoaming" value="true"/>
+        <string name="wfc_spn_string">Mytel</string>
+        <string name="wfc_format_wifi_string">%1$s Wifi Calling</string>
+        <boolean name="groupChatDefaultsToMMS" value="false" />
+        <!-- Volte UI -->
+        <string name="carrier_volte_hd_icon_flag">00101010</string>
+    </carrier_config>
+</carrier_config_list>

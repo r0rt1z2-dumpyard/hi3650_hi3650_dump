@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <!-- Videotron CA 302520 -->
+    <carrier_config>
+        <!--UT TA-->
+        <boolean name="utForbiddenWhenVolteSwitchOff" value="false"/>
+        <int name="utUseApn" value="1" />
+        <int name="callWaitingMode" value="11" />
+        <int name="utNafPort" value="8090" />
+        <boolean name="CFNRcChangeWithCFNL" value="false"/>
+        <int name="setDefaultNoReplyTimer" value="0"/>
+        <string name="utBsfSrvAddr">bsf.ims.mnc520.mcc302.pub.3gppnetwork.org</string>
+        <string name="utParamsCfg">0:1</string>
+        <!--VOWIFI NO TA-->
+        <string name="vowifiHplmnListItem">302520, epdg.epc.mnc520.mcc302.pub.3gppnetwork.org</string>
+        <int name="carrier_default_wfc_ims_mode_int" value="1"/>
+        <boolean name="vowifi_mms_switch" value="true"/>
+        <boolean name="vowifi_ut_switch" value="true"/>
+        <string name="Ikev2EncAlg">RCT_ALG_AES256_CBC</string>
+        <string name="Ikev2PrfAlg">RCT_ALG_AES_XCBC</string>
+        <string name="Ikev2HashAlg">RCT_ALG_HMAC_SHA1</string>
+        <string name="Ikev2DhGroup">RCT_ALG_MODP1024</string>
+        <string name="EspEncAlg">RCT_ALG_AES256_CBC</string>
+        <string name="EspAuthAlg">RCT_ALG_HMAC_SHA1</string>
+        <int name="Ikev2SaLifeTime" value="43200"/>
+        <int name="IPsecSaLifeTime" value="43200"/>
+        <int name="Ikev2IkeSaRekeyTimerSec" value="43200"/>
+        <int name="Ikev2IPsecSaRekeyTimeSec" value="43200"/>
+        <string name="vowifiRssiThreshold">-66,-85,-6,-11</string>
+        <string name="vowifiWifiChip24GConf">-85,-74,3,1</string>
+        <string name="vowifiWifiChip5GConf">-85,-74,3,1</string>
+        <string name="vowifi_UT_APN">XCAP</string>
+        <int name="vowifiRoamingConfig" value="0"/>
+        <boolean name="vowifiStaticUnroaming" value="true"/>
+        <boolean name="vowifiStaticRoaming" value="true"/>
+        <boolean name="vowifi_roaming_switch" value="true"/>
+    </carrier_config>
+</carrier_config_list>

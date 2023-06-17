@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<carrier_config_list>
+    <!--DT_AT 23203-->
+    <carrier_config>
+        <!--UT NO TA-->
+        <int name="callWaitingMode" value="11"/>
+        <int name="utOIRSourceMode" value="1"/>
+        <int name="smsToMmsTextThreshold" value="5" />
+        <string name="utParamsCfg">0:1,19:1</string>
+        <int name="utUseApn" value="1"/>
+        <boolean name="utUseMultiCF" value="true"/>
+        <boolean name="carrier_build_version_bool" value="true"/>
+        <boolean name="use_403_for_local_cw" value="true"/>
+        <boolean name="CFNRcChangeWithCFNL" value="false"/>
+        <boolean name="carrier_xcap_data_roaming_switch" value="true"/>
+        <!--VOLTE NO TA-->
+        <boolean name="carrier_default_volte_switch_on_bool" value="true"/>
+    </carrier_config>
+</carrier_config_list>

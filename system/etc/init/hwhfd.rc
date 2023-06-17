@@ -1,0 +1,12 @@
+service hwhfd /system/bin/hwhfd
+	class late_start
+	user root
+	group root
+	oneshot
+
+
+on property:hwouc.hwhfd.start=1
+	start hwhfd
+
+on property:hwouc.hwhfd.start=0
+	stop hwhfd

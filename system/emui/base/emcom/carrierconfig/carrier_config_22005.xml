@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<carrier_config_list>
+    <!--VIP_SB 22005-->
+    <carrier_config>
+        <!--UT NO TA-->
+        <boolean name="utForbiddenWhenVolteSwitchOff" value="false"/>
+        <int name="callWaitingMode" value="11"/>
+        <string name="utBsfSrvAddr">bsf.ims.mnc005.mcc220.pub.3gppnetwork.org</string>
+        <!-- Volte UI -->
+        <string name="carrier_volte_hd_icon_flag">00101010</string>
+    </carrier_config>
+</carrier_config_list>

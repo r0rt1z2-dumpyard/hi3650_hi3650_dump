@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packageList>
+	<packageInfo author="谷歌" package="com.android.bluetooth" feature="蓝牙是一种无线技术标准，可实现固定设备、移动设备和楼宇个人域网之间的短距离数据交换（使用2.4—2.485GHz的ISM波段的UHF无线电波），可实现文件传输，听音乐，以及穿戴设备使用等功能。" label="com.android.bluetooth">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.bluetoothmidiservice" feature="蓝牙设备管理应用，用于管理通过蓝牙连接至手机的音频设备。" label="com.android.bluetoothmidiservice">
+	</packageInfo>
+	<packageInfo package="com.android.bips" feature="Mopria 打印服务，用于打印移动设备上的文件或照片。" author="谷歌" label="com.android.bips">
+	</packageInfo>
+	<packageInfo use-permission=" " author="谷歌" label="系统应用-外部存储设备" feature="port登录应用，中国区未预置。" package="com.android.captiveportallogin">
+	</packageInfo>
+	<packageInfo use-permission=" " author="谷歌" label="证书安装" feature="提供证书安装服务功能。" package="com.android.certinstaller">
+	</packageInfo>
+	<packageInfo package="com.android.companiondevicemanager" feature="设备连接管理器，用于搜索穿戴设备，以及进行配对和连接。" author="谷歌" label="com.android.companiondevicemanager">
+	</packageInfo>
+	<packageInfo package="com.huawei.contentsensor" feature="智能识屏取词模块，帮助智能识屏获取需要分析处理的文本内容。" author="华为终端有限公司" label="com.huawei.contentsensor">
+	</packageInfo>
+	<packageInfo use-permission=" " author="华为终端有限公司" label="google N CTS相关" feature="CTS环境运行辅助APP。" package="com.android.cts.ctsshim">
+	</packageInfo>
+	<packageInfo use-permission=" " author="谷歌" label="下载内容" feature="提供公用的下载服务内容显示。" package="com.android.providers.downloads.ui">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="开启查找我的手机功能后，您可以使用查找我的手机查看、定位设备位置信息，锁定、擦除设备上的数据。 " package="com.huawei.android.findmyphone" label="com.huawei.android.findmyphone">
+	</packageInfo>
+	<packageInfo package="com.android.supl" feature="AGPS SUPL协议栈的部分实现，用于获取设备驻留小区、连接 WLAN 等信息，并跟网络 SUPL 服务器进行数据交互。" author="海思半导体有限公司" label="com.android.supl">
+	</packageInfo>
+	<packageInfo use-permission=" " author="谷歌" label=" " feature="GMS 扩展动态库。" package="com.google.android.ext.shared">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="云文件夹，在您使用“精品推荐”文件夹的应用时，给您提供 TOP 级精品应用的推荐服务，让您轻松发现实用、好用的手机应用。" package="com.huawei.hifolder" label="com.huawei.hifolder">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.hilink.framework" feature="与华为 HiLink 智能网关配合，支持智能家居设备间互联互通。" label="com.huawei.hilink.framework">
+	</packageInfo>
+	<packageInfo package="com.huawei.hitouch" feature="智能识屏可帮您高效处理文字，推荐与所识别文字关键词相关的信息与服务。" author="华为终端有限公司" label="com.huawei.hitouch">
+	</packageInfo>
+	<packageInfo package="com.huawei.hiview" feature="日志引擎，采集和统计您手机端的故障信息用于问题诊断和分析，以便为您提供更好的手机产品。" author="华为终端有限公司" label="com.huawei.hiview">
+	</packageInfo>
+	<packageInfo package="com.huawei.hiviewtunnel" feature="日志引擎上传模块，将日志引擎采集和统计的故障数据上传分析，以便清晰明了的了解和解决手机故障。" author="华为终端有限公司" label="com.huawei.hiviewtunnel">
+	</packageInfo>
+	<packageInfo use-permission=" " author="谷歌" label="系统应用-文本、网页浏览器" feature="查看文本、html功能。" package="com.android.htmlviewer">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.instantshare" feature="一键快速分享文件、图片、apk等任意文件给周边开启该功能的设备。" label="com.huawei.android.instantshare">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.hwaps" feature="显示流程中GPU及LCD等相关器件功耗优化管控应用。" label="com.huawei.android.hwaps">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.bluetooth" feature="蓝牙导入基于蓝牙的一种 pbapclient 端的实现，可以实现手机通过蓝牙导入联系人的操作。" label="com.huawei.bluetooth">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.phone.recorder" feature="通话录音是华为自研的通话录音及自动录音功能。" label="com.android.phone.recorder">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="您可以通过文件管理器管理手机上的文件，如：图片、视频、音频、文档、APP等。" package="com.huawei.hidisk" label="com.huawei.hidisk">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.cryptosms.service" feature="使用短信加密功能，您可以将短信加密发送，信息接收方必须使用设备上登录的华为帐户密码确认，才能查看短信内容，以保护短信安全。" label="com.huawei.cryptosms.service">
+	</packageInfo>
+	<packageInfo use-permission=" " author="华为终端有限公司" label="悬浮按钮" feature="为用户提供快捷操作、能快速进入主屏幕、回退、最近任务。" package="com.huawei.android.FloatTasks">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.iaware" feature="iAware是一个性能优化的平台，分为实时子系统和非实时子系统，其中非实时子系统在HwIAware .apk中实现，功能包括iAware配置管理和部分性能优化特性（如：习惯学习、定时清理等）。" label="com.huawei.iaware">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.ims" feature="VoLTE（Voice over LTE）功能，让您在打电话的同时也可以上网，并获得更短的接通等待时间、更高质量和更自然的语音视频通话效果。" label="com.huawei.ims">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.instantonline" feature="华为一键热点应用通过打开蓝牙和登录相同华为账户，实现无需输入密码即可共享热点的功能。" label="com.huawei.android.instantonline">
+	</packageInfo>
+	<packageInfo use-permission=" " author="华为" label="华为桌面" feature="在桌面显示各个应用的图标、并启动登录应用。" package="com.huawei.android.launcher">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.lbs" feature="GPS弱讯下，提昇定位率，加快定位速度。" label="com.huawei.lbs">
+	</packageInfo>
+	<packageInfo use-permission=" " author="华为终端有限公司" label="华为杂志锁屏" feature="管理系统预置的杂志锁屏内容、提供锁屏壁纸、并提供更新和订阅功能。" package="com.android.keyguard">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="文件分享等互联互通自发现自连接业务公共中间件，支持文件分享业务和一键热点功能。" package="com.huawei.nearby" label="com.huawei.nearby">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="提供系统升级服务。" package="com.huawei.android.hwouc" label="com.huawei.android.hwouc">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="华为支付为华为各云业务线上支付提供解决方案。" package="com.huawei.android.hwpay" label="com.huawei.android.hwpay">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.powergenie" feature="省电精灵是系统功耗优化管控模块，管理第三方应用的唤醒、告警、提示等耗电行为，支撑手机管家省电模式和超级省电模式的实现，保障手机续航能力。" label="com.huawei.powergenie">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.pushagent" feature="提供消息推送服务。" label="com.huawei.android.pushagent">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.internal.app" feature="应用打开方式,系统分享框功能（包含图库分享）。" label="com.huawei.android.internal.app">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.secime" feature="安全输入法，输入密码时确保您的个人信息安全性。" label="com.huawei.secime">
+	</packageInfo>
+	<packageInfo use-permission=" " author="华为终端有限公司" label="指纹" feature="提供系统的安全能力支撑，负责部分安全业务的后台逻辑处理。" package="com.huawei.securitymgr">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="亮点智能推介，向用户推荐和说明EMUI的特性，提升用户的使用体验。" package="com.huawei.tips" label="com.huawei.tips">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.soundrecorder" feature="提供录音功能。" label="com.android.soundrecorder">
+	</packageInfo>
+	<packageInfo package="com.huawei.synergy" feature="华为消息同步应用，可以帮您将手机端的通知、短信、来电、闹钟、情景智能等消息同步到您的穿戴设备上，让您无须解锁手机，即可知道消息内容。除此之外，您还可以通过穿戴设备对手机进行电话、闹钟、拍照或找手机等操作，帮助您更加便捷的使用和控制手机。" author="华为终端有限公司" label="com.huawei.synergy">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.trustagent" feature="提供蓝牙智能解锁功能。" label="com.huawei.trustagent">
+	</packageInfo>
+	<packageInfo use-permission=" " author="华为终端有限公司" label="信任环" feature="当两台设备均登录同一个华为帐号后，通过该应用可建立起一种相互信任的关系，并未其他应用提供安全可靠的认证结果。" package="com.huawei.trustcircle">
+	</packageInfo>
+	<packageInfo use-permission=" " author="华为终端有限公司" label="支付保护中心" feature="支付保护中心为您提供一个独立纯净的应用运行空间，隔离恶意程序，为支付、金融、财产类应用提供保护，让您的支付更安全更放心。" package="com.huawei.trustspace">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.bd" feature="EMUI体验分析易用性增强。" label="com.huawei.bd">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.wfdft" feature="WLAN 直连可支持华为设备之间数据传输。" label="com.huawei.android.wfdft">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.wifiprobqeservice" feature="WiFi+ 智能评分是 WiFi+ 功能子模块，用于 WebView 加载 Url，制造上网行为，评估 WiFi 质量以及 Portal 检测的容错。" label="com.huawei.wifiprobqeservice">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.yellowpage" feature="提供联系人中的黄页功能。" label="com.huawei.yellowpage">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.iconnect" feature="支持穿戴设备互联，提供如下功能：扫描发现穿戴设备后进行连接提醒、下载或打开对应应用、穿戴设备间因为距离太远断开连接后快速重新连接。" label="com.huawei.iconnect">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.keychain" feature="密码校验。" label="com.android.keychain">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.wallpaper.livepicker" feature="提供桌面动态壁纸。" label="com.android.wallpaper.livepicker">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.mirrorshare" feature="无线分享是提供局域网的无线投屏显示功能。" label="com.huawei.android.mirrorshare">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.nfc" feature="NFC 基础服务，提供 NFC 读写、P2P、卡模拟三大功能。" label="com.android.nfc">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.pacprocessor" feature="解析数据代理脚本。" label="com.android.pacprocessor">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.dreams.phototable" feature="互动屏保,充电状态下,屏保,需要设置。" label="com.android.dreams.phototable">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.svox.pico" feature="TTS文字转语音引擎。" label="com.svox.pico">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.printspooler" feature=" 提供打印预览功能、以及保存pdf和打印入口。" label="com.android.printspooler">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="org.simalliance.openmobileapi.service" feature="支持钱包应用智能卡相关功能，如：运营商钱包应用访问 SIM 卡、华为/荣耀钱包访问 eSE。" label="org.simalliance.openmobileapi.service">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.stk" feature="运营商 SIM 卡相关应用。" label="com.android.stk">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.providers.userdictionary" feature="保存用户自定义词语。" label="com.android.providers.userdictionary">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.camera2.mode.food" feature="相机的美食模式，让您拍摄的食物照片色彩艳丽，看起来更加可口诱人。" label="com.huawei.camera2.mode.food">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.airsharing" feature="多屏互动支持局域网内的多媒体内容共享服务和无线投屏显示功能。" label="com.huawei.android.airsharing">
+	</packageInfo>
+	<packageInfo use-permission=" " author="谷歌" label=" 系统应用-充电待机互动屏保" feature="充电待机时、屏幕上显示的互动屏保。" package="com.android.dreams.basic">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.compass" feature="提供指南针功能。" label="com.huawei.compass">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="玩机技巧为您提供手机亮点功能介绍以及用户手册，让您快速了解手机精彩功能，并获取操作技巧和使用指导。" package="com.huawei.android.tips" label="com.huawei.android.tips">
+	</packageInfo>
+	<packageInfo package="com.android.wallpaperbackup" feature="壁纸备份功能" author="谷歌" label="com.android.wallpaperbackup">
+	</packageInfo>
+	<packageInfo package="com.android.frameworkhwext.dark" feature="通过此功能，手机应用界面可以呈现为黑色背景白色字体的效果，让手机界面的风格更加简约。" author="华为终端有限公司" label="com.android.frameworkhwext.dark">
+	</packageInfo>
+	<packageInfo package="com.android.frameworkhwext.honor" feature="通过此功能，手机应用界面可以呈现为蓝色背景白色字体的效果，让手机界面的风格更加明快活泼。" author="华为终端有限公司" label="com.android.frameworkhwext.honor">
+	</packageInfo>
+	<packageInfo author="谷歌" package="android" feature="原生系统资源APP。" label="android">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="androidhwext" feature="华为扩展系统资源APP。" label="androidhwext">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.backupconfirm" feature="提供备份和恢复初始设置的功能。" label="com.android.backupconfirm">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.providers.blockednumber" feature="为通讯录，短信或者其他模块提供黑名单的增删、改查数据操作。" label="com.android.providers.blockednumber">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.calendar" feature="日历提供日期和日程的查看和编辑。" label="com.android.calendar">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.providers.calendar" feature="保存日历数据。" label="com.android.providers.calendar">
+	</packageInfo>
+	<packageInfo package="com.android.calllogbackup" feature="通话记录备份恢复功能，让您更换手机也不会漏掉未接来电的记录，以免漏回重要来电。" author="谷歌" label="com.android.calllogbackup">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.carrierconfig" feature="随卡适配，配置 VoLTE、RCS、VoWiFi 等功能的参数。" label="com.android.carrierconfig">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.contacts" feature="联系人信息查看与编辑入口，在联系人界面向右滑动可以拨号、查看通话记录。" label="com.android.contacts">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.providers.contacts" feature="联系人、通话记录相关数据的数据库。" label="com.android.providers.contacts">
+	</packageInfo>
+	<packageInfo use-permission=" " author="华为终端有限公司" label="google N 短信相关 " feature="CTS环境运行辅助APP。" package="com.android.cts.priv.ctsshim">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.defcontainer" feature="默认存储服务" label="com.android.defcontainer">
+	</packageInfo>
+	<packageInfo use-permission=" " author="谷歌" label="系统应用-文本管理器" feature="显示所有通过下载服务下载的文件。" package="com.android.documentsui">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.providers.downloads" feature="提供公用的下载服务。" label="com.android.providers.downloads">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.emergency" feature="此应用是提供了一个查看个人紧急信息的入口，当用户遇到紧急事件时，用户或者其他人，可以通过紧急拨号的入口查看你的个人紧急信息。 可添加紧急个人信息内容如下： 1、可添加个人信息到紧急信息里面，包括姓名、地址、血型、过敏反应等个人信息。 2、可添加多名紧急联系人到紧急信息里面，包括联系人名称和号码。" label="com.android.emergency">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.calculator2" feature="提供计算器功能。" label="com.android.calculator2">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.exchange" feature="此apk是邮件exchange协议的控制部分。" label="com.android.exchange">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.externalstorage" feature="外部存储设备管理器。" label="com.android.externalstorage">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.location.fused" feature="定位位置。" label="com.android.location.fused">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.gallery3d" feature="展示用户图片、视频等，包括本地图片相册、云端相册及共享相册。可支持图片的查看、删除、分享、复制、重命名等操作。是用户查看、管理图片的主要途径。" label="com.android.gallery3d">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.google.android.gms" feature="GMS核心服务。" label="com.google.android.gms">
+	</packageInfo>
+	<packageInfo use-permission=" " author="谷歌" label=" " feature="GMS 扩展服务。" package="com.google.android.ext.services">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.google.android.gsf" feature="GMS服务框架。" label="com.google.android.gsf">
+	</packageInfo>
+	<packageInfo package="com.huawei.hiaction" feature="智能识屏中控模块，帮助智能识屏综合调用取词、语义分析和决策判断等能力，给您提供完整的智能识屏服务。" author="华为终端有限公司" label="com.huawei.hiaction">
+	</packageInfo>
+	<packageInfo use-permission="华为原生相机，包含专业相机（依赖硬件）、滤镜模式、笑脸抓拍等功能。" author="华为终端有限公司" feature="华为原生相机，包含专业相机、滤镜模式、笑脸抓拍等功能。" package="com.huawei.camera" label="com.huawei.camera">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.dsdscardmanager" feature="双卡管理是对SIM卡的状态、4G、数据业务和卡信息进行管理。" label="com.huawei.android.dsdscardmanager">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.ca" feature="为备忘录的提醒功能（时间闹钟、指定地点提醒、智能出行提醒）提供后台服务。" label="com.huawei.ca">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.chr" feature="通信协议可维可测apk，用于检测异常，收集异常关键信息等。" label="com.huawei.android.chr">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.intelligent" feature="情景智能特性旨在将用户零散的信息集中管理起来，并在合适的时间进行提醒。" label="com.huawei.intelligent">
+	</packageInfo>
+	<packageInfo package="com.huawei.recsys" feature="智能推荐系统，用于华为智能助手服务推荐，EMUI 亮点特性推荐以及智能通知管理。" author="华为终端有限公司" label="com.huawei.recsys">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.motionservice" feature="用户通过手势使用功能、比如手势截屏。" label="com.huawei.motionservice">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.HwMultiScreenShot" feature="滚动截屏，用于对较长的页面进行多段式截屏，并完整拼接成一张图片的功能。" label="com.huawei.HwMultiScreenShot">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.example.android.notepad" feature="备忘录可以记录事件，并且可以指定时间、位置提醒待办事项。" label="com.example.android.notepad">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" package="com.huawei.phoneservice" feature="会员服务是华为终端公司面向个人消费者提供的官方售后服务软件，集成会员、快递寄修、预约维修、在线客服等十多项丰富的在线服务内容，旨在为亿万华为终端用户提供优质、省心、快捷的服务。" label="com.huawei.phoneservice">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.scanner" feature="华为扫一扫应用提供二维码扫描、商品码扫描、单词翻译、句子翻译和扫题功能。" label="com.huawei.scanner">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.screenrecorder" feature="提供录屏功能。" label="com.huawei.screenrecorder">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" package="com.huawei.android.hsf" feature="华为扩展的Framework基础框架能力，用于对接部分华为自研应用。" label="com.huawei.android.hsf">
+	</packageInfo>
+	<packageInfo use-permission=" " author="华为终端有限公司" label="开机向导" feature="首次开机时、引导用户设置语言、应用使用权限、华为会员、数据迁移、云服务、密码或指纹等信息。" package="com.huawei.hwstartupguide">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.systemmanager" feature="手机管家（平板上为平板管家）是用于帮助提升手机安全和改善用户使用体验的应用，管理手机的隐私保护，软件监控，省电管理，防骚扰以及其他权限控制等各个方面。" label="com.huawei.systemmanager">
+	</packageInfo>
+	<packageInfo package="com.huawei.systemserver" feature="华为自研系统服务，用于对 Android 系统进行系统改造和创新，打造更符合您使用习惯操作系统，让您获得更好的产品体验。" author="华为终端有限公司" label="com.huawei.systemserver">
+	</packageInfo>
+	<packageInfo package="huawei.android.widget" feature="EMUI基础控件实现应用。" author="华为终端有限公司" label="huawei.android.widget">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.incallui" feature="此apk是通话应用中通话界面部分的流程及显示控制部分。" label="com.android.incallui">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.inputdevices" feature="输入设备。" label="com.android.inputdevices">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.managedprovisioning" feature="提供AFW的ManagedProvisioning功能。" label="com.android.managedprovisioning">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.providers.media" feature="媒体数据库，是图库、音乐、视频应用的本地数据记录的存储管理模块。支持记录图片、音乐、视频等媒体信息，向各应用提供数据库的增删查改等接口，同时与媒体扫描、MTP等功能有关联协作关系。" label="com.android.providers.media">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.mms" feature="短信业务应用。" label="com.android.mms">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.mms.service" feature="MMS服务。" label="com.android.mms.service">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.mtp" feature="为MTP数据连接提供支撑服务。" label="com.android.mtp">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="打包安装程序是管理应用权限与动态授权，并且提供给用户安装、卸载能力的软件。" package="com.android.packageinstaller" label="com.android.packageinstaller">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.proxyhandler" feature="将数据代理服务器设置到kernel。" label="com.android.proxyhandler">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.providers.settings" feature="提供settingsProvider数据表的功能。" label="com.android.providers.settings">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.settings" feature="提供系统应用设置项菜单。" label="com.android.settings">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.sharedstoragebackup" feature="备份应用，备份手机内置存储和SD内容备份。" label="com.android.sharedstoragebackup">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.shell" feature="提供adb shell的手机侧功能。" label="com.android.shell">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.statementservice" feature="google M App链接的功能。" label="com.android.statementservice">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.systemui" feature="Google的原生模块，承载状态、信号栏、下拉通知栏、导航栏和多任务等。" label="com.android.systemui">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.apps.tag" feature="用来显示NFC服务读取的NFC标签信息。" label="com.android.apps.tag">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.server.telecom" feature="此apk是通话应用中通话基础流程的控制部分。" label="com.android.server.telecom">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.providers.telephony" feature="存储短信数据的数据库。" label="com.android.providers.telephony">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.phone" feature="通话应用中connection服务及通话设置、移动网络设置等在此apk中实现。" label="com.android.phone">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.vpndialogs" feature="开启VPN时弹出的确认对话框。" label="com.android.vpndialogs">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.android.wallpapercropper" feature="可以对图片进行裁剪，改变图片尺寸。" label="com.android.wallpapercropper">
+	</packageInfo>
+	<packageInfo author="百度" package="com.baidu.input_huawei" feature="百度输入法。" label="com.baidu.input_huawei">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.google.android.configupdater" feature="GMS配置更新服务。" label="com.google.android.configupdater">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.contactscamcard" feature="华为名片扫描，您可以通过拍照的方式，自动将纸质名片中的信息添加到手机中，让您轻松又快速的添加联系人信息。" label="com.huawei.contactscamcard">
+	</packageInfo>
+	<packageInfo package="com.huawei.decision" feature="智能识屏决策系统模块，帮助智能识屏中获取的信息进行判断处理，给您提供更加便捷的信息服务。" author="华为终端有限公司" label="com.huawei.decision">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.email" feature="邮件业务应用。" label="com.android.email">
+	</packageInfo>
+	<packageInfo author="谷歌" feature="谷歌备份服务。" package="com.google.android.backuptransport" label="com.google.android.backuptransport">
+	</packageInfo>
+	<packageInfo author="谷歌" feature="谷歌联系人同步后台服务。" package="com.google.android.syncadapters.contacts" label="com.google.android.syncadapters.contacts">
+	</packageInfo>
+	<packageInfo author="谷歌" feature="谷歌服务开机时的初始化操作。" package="com.google.android.onetimeinitializer" label="com.google.android.onetimeinitializer">
+	</packageInfo>
+	<packageInfo author="谷歌" feature="部分Google合作游戏运行依赖的环境。" package="com.google.android.partnersetup" label="com.google.android.partnersetup">
+	</packageInfo>
+	<packageInfo author="谷歌" feature="用于中国区更新谷歌服务。" package="com.android.vending" label="com.android.vending">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.google.android.printservice.recommendation" feature="Google Cloud Print链接服务。" label="com.google.android.printservice.recommendation">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="华为智能家居应用，可作为HiLink智能家居生态平台的体验入口，可发现和连接家庭网络内满足HiLink协议的设备，并基于用户实际生活场景，支持不同设备间的交互。" package="com.huawei.smarthome" label="com.huawei.smarthome">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="华为视频是华为为手机用户量身打造的高品质、全程无广告的手机视频应用，旨在为用户提供精品视频观影体验。提供涵盖好莱坞电影、国内外院线大片、专属纪录片、电视剧等海量高清正版影视内容。利用华为平台终端的技术优势，为用户提供省流量、低电耗、完美画质等极致观影体验。" package="com.huawei.himovie" label="com.huawei.himovie">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="华为移动服务（Huawei Mobile Services）为华为帐号、华为支付、华为推送等华为自有应用和第三方应用提供基础服务，包括登录帐号、支付、接收消息等。" package="com.huawei.hwid" label="com.huawei.hwid">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" feature="华为穿戴设备管理。" package="com.huawei.bone" label="com.huawei.bone">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.deskclock" feature="提供闹钟功能。" label="com.android.deskclock">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.hwdetectrepair" feature="手机软硬件功能检测软件。" label="com.huawei.hwdetectrepair">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="华为生活服务是华为官方推出的生活消费类软件，您可以使用华为生活服务为手机充话费、流量、购买电影票、海外购物、团购美食、订酒店、订机票、打车、缴水电费、查询快递等。" package="com.huawei.lives" label="com.huawei.lives">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="华为音乐是提供音乐播放的应用，提供音乐播放功能，可浏览、播放、下载在线音乐内容，并支持低功耗播放、自定义歌单、MV播放、全局搜索、听歌识曲、水母动效。" package="com.android.mediacenter" label="com.android.mediacenter">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.android.hwmirror" feature="华为镜子应用，可以进行放大、缩小操作，改变镜子边框效果。" label="com.android.hwmirror">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.mmitest" feature="支撑器件类测试功能，保证发货手机基本器件功能正常。" label="com.huawei.mmitest">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.parentcontrol" feature="供家长设置手机各应用的可使用时间段功能。" label="com.huawei.parentcontrol">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.projectmenu" feature="支持系统单板、网络等信息查询。" label="com.huawei.android.projectmenu">
+	</packageInfo>
+	<packageInfo author="科大讯飞" package="com.iflytek.speechsuite" feature="语音助手应用，帮助用户通过语音执行操作。" label="com.iflytek.speechsuite">
+	</packageInfo>
+	<packageInfo use-permission=" " author="华为终端有限公司" label="主题" feature="美化系统、可管理本地已下载的主题。在连网时可下载在线主题、壁纸、铃声、字体等。" package="com.huawei.android.thememanager">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.vassistant" feature="语音助手应用，帮助用户通过语音执行操作。" label="com.huawei.vassistant">
+	</packageInfo>
+	<packageInfo author="华为技术有限公司" package="com.vmall.client" feature="华为商城是华为公司旗下的自营电子商务平台，以营造用户的移动信息生活为服务宗旨，提供华为手机、无线上网设备、平板电脑、配件等系列终端产品的销售和服务。" label="com.vmall.client">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="视频•优酷版是华为为手机用户量身打造的高品质手机视频应用，旨在为用户提供一站式的视频体验服务。" package="com.huawei.hwvplayer.youku" label="com.huawei.hwvplayer.youku">
+	</packageInfo>
+	<packageInfo package="com.huawei.android.totemweatherapp" feature="提供各城市气象信息，能根据当前所处位置，显示当前天气和未来天气，并及时预警恶劣天气。" author="华为终端有限公司" label="com.huawei.android.totemweatherapp">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.android.totemweather" feature="提供各城市气象信息、并能根据当前的所处位置、显示当前位置的天气信息。预报未来天气、及时预警恶劣天气。" label="com.huawei.android.totemweather">
+	</packageInfo>
+	<packageInfo package="com.huawei.android.totemweatherwidget" feature="天气时钟桌面小工具。" author="华为终端有限公司" label="com.huawei.android.totemweatherwidget">
+	</packageInfo>
+	<packageInfo package="com.huawei.nlp" feature="智能识屏语义分析模块，将智能识屏区域的文本分成一组组关联信息的词组，以便快速进行相应词组的信息或服务搜索。" author="华为终端有限公司" label="com.huawei.nlp">
+	</packageInfo>
+	<packageInfo author="华为软件技术有限公司" feature="一键将旧手机中的联系人、照片、视频、应用等数据迁移至华为新手机，轻松换机。" package="com.hicloud.android.clone" label="com.hicloud.android.clone">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.google.android.marvin.talkback" feature="TTS文字转语音引擎。" label="com.google.android.marvin.talkback">
+	</packageInfo>
+	<packageInfo author="华为终端有限公司" package="com.huawei.watch.sync" feature="同步手机侧应用到手表侧。" label="com.huawei.watch.sync">
+	</packageInfo>
+	<packageInfo author="谷歌" package="com.google.android.webview" feature="Html资源加载器。" label="com.google.android.webview">
+	</packageInfo>
+</packageList>

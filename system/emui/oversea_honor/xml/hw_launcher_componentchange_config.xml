@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<change>
+  <components>
+    <component 
+    old = "com.huawei.himovie/com.huawei.himovie.ui.login.SplashScreenActivity" 
+    new = "com.huawei.himovie.overseas/com.huawei.himovie.ui.login.SplashScreenActivity"/>
+  </components>
+</change>
