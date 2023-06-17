@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (c) 2009, The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * you may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at 
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0 
+ *
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an "AS IS" BASIS, 
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+ * See the License for the specific language governing permissions and 
+ * limitations under the License.
+ */
+-->
+
+<launcher_config>
+    <item name="config_pmqosEnabled">true</item>
+    <item name="config_drawWallPaperSelf">false</item>
+    <integer name="config_DefaultEffectIndex">0</integer>
+    <bool name="config_orientation_enabled">true</bool>
+    <!-- DTS2012111206324  yueyi00193929 20121113 begin -->
+    <integer name="config_snapVelocity">600</integer>
+    <!-- DTS2012111206324  yueyi00193929 20121113 end -->
+    <!-- DTS2012102406767 yuyanhui/00212142 20121116 begin -->
+    <integer name="config_dualcardEnabled">false</integer>
+    <!-- DTS2012102406767 yuyanhui/00212142  20121116 end -->
+    <!-- DTS2012111202238 yueyi00193929 20121119 begin -->
+    <item name="config_touchmultipleEnabled">true</item>
+    <!-- DTS2012111202238 yueyi00193929 20121119 end -->
+    <bool name="config_addNewInstallAppLabel">false</bool>
+    <!-- DTS2016061205417 pengkelin/pwx307511 20160613 delete -->
+    <!-- DTS2014012801670  00217057 20140210 begin -->
+    <integer name="config_touchSlop">0</integer>
+    <!-- DTS2014012801670  00217057 20140210 end -->
+    <!-- DTS2016061205417 pengkelin/pwx307511 20160701 delete -->
+    <!-- DTS2014122301039 z84020356 20141225 begin -->
+    <item name="config_IconTitleSize">10.5</item>
+    <!-- DTS2014122301039 z84020356 20141225 end -->
+    <!-- DTS2016061205417 pengkelin/pwx307511 20160613 delete -->
+    <!-- DTS2016051108751 yuchao/WX333352 20160512 begin -->
+    <!-- delete config_DesktopScreenNum -->
+    <!-- DTS2016051108751 yuchao/WX333352 20160512 end -->
+    <!-- DTS2016063006354 xiekaiming wx278091 20160705 begin -->
+    <!-- DTS2016061205417 pengkelin/pwx307511 20160711 delete -->
+    <integer name="config_cellsDefaultLayoutIndex">2</integer>
+    <!-- DTS2016063006354 xiekaiming wx278091 20160705  end  -->
+</launcher_config>

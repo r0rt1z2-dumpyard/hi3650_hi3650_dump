@@ -1,0 +1,3 @@
+/data/hw_init/product/app/RemoteControlService/RemoteControlService.apk
+/data/hw_init/product/app/HwGameAssistant/HwGameAssistant.apk
+/product/app/HwFMRadio/HwFMRadio.apk

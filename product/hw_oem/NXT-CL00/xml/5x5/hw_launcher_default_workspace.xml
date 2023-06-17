@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<favorites xmlns:launcher="http://schemas.android.com/apk/res/com.huawei.android.launcher">
+    <favorite
+        launcher:packageName="com.huawei.health"
+        launcher:className="com.huawei.health.MainActivity"
+        launcher:op="delete"/>
+    <favorite
+        launcher:packageName="com.huawei.gamebox"
+        launcher:className="com.huawei.gamebox.GameBoxActivity"
+        launcher:container="-100"
+        launcher:screen="1"
+        launcher:x="3"
+        launcher:y="1"
+        launcher:spanX="1"
+        launcher:spanY="1"
+        launcher:op="insertinto"/>
+    <favorite
+        launcher:packageName="com.huawei.health"
+        launcher:className="com.huawei.health.MainActivity"
+        launcher:container="-100"
+        launcher:screen="1"
+        launcher:x="4"
+        launcher:y="1"
+        launcher:spanX="1"
+        launcher:spanY="1"
+        launcher:op="insert"/>
+    <folder
+        launcher:title="@string/cust_folder_name_top_apps"
+        launcher:appid="0"
+        launcher:container="-100"
+        launcher:screen="1"
+        launcher:op="add">
+        <favorite
+            launcher:packageName="com.huawei.hwvplayer.youku"
+            launcher:className="com.huawei.hwvplayer.framework.MainActivity"/>
+        <favorite
+            launcher:packageName="com.sina.weibo"
+            launcher:className="com.sina.weibo.SplashActivity"/>
+        <favorite
+            launcher:packageName="com.qiyi.video"
+            launcher:className="com.qiyi.video.WelcomeActivity"/>
+        <favorite
+            launcher:packageName="com.unioncast.oleducation"
+            launcher:className="com.unioncast.oleducation.act.StartACT" />
+        <favorite
+            launcher:packageName="ctrip.android.view"
+            launcher:className="ctrip.android.view.view.CtripDeclarationActivity" />
+        <favorite
+            launcher:packageName="com.Qunar"
+            launcher:className="com.mqunar.splash.SplashActivity" />
+        <favorite
+            launcher:packageName="com.autonavi.minimap"
+            launcher:className="com.autonavi.map.activity.SplashActivity" />
+        <favorite
+            launcher:packageName="com.netease.newsreader.activity"
+            launcher:className="com.netease.nr.biz.ad.AdActivity" />
+        <favorite
+            launcher:packageName="com.taobao.taobao"
+            launcher:className="com.taobao.tao.welcome.Welcome" />
+        <favorite
+            launcher:packageName="cn.wps.moffice_eng"
+            launcher:className="cn.wps.moffice.documentmanager.PreStartActivity" />
+        <favorite
+            launcher:packageName="com.baidu.searchbox"
+            launcher:className="com.baidu.searchbox.SplashActivity" />
+        <favorite
+            launcher:packageName="com.android.dazhihui"
+            launcher:className="com.android.dazhihui.dzh.dzh" />
+        <favorite
+            launcher:packageName="chinatelecom.mwallet"
+            launcher:className="chinatelecom.mwallet.WelcomeActivity" />
+        <favorite
+            launcher:packageName="com.chaozh.iReaderFree"
+            launcher:className="com.chaozh.iReader.ui.activity.WelcomeActivity" />
+        <favorite
+            launcher:packageName="im.yixin"
+            launcher:className="im.yixin.activity.WelcomeActivity" />
+        <favorite
+            launcher:packageName="com.besttone.hall"
+            launcher:className="com.besttone.hall.activity.MainActivity" />
+        <favorite
+            launcher:packageName="com.telecom.video.ikan4g"
+            launcher:className="com.telecom.video.ikan4g.ui.activity.LoadingActivity" />
+        <favorite
+            launcher:packageName="cn.egame.terminal.client4g"
+            launcher:className="cn.egame.terminal.client4g.uis.Egame4GFlashActivity" />
+        <favorite
+            launcher:packageName="com.akazam.android.wlandialer"
+            launcher:className="com.akazam.android.wlandialer.StartActivity" />
+        <favorite
+            launcher:packageName="com.pdager"
+            launcher:className="com.pdager.enavi.Act.APIMain" />
+    </folder>
+    <favorite
+        launcher:packageName="com.huawei.gameassistant"
+        launcher:className="com.huawei.gameassistant.views.GameassistantMainActivity"
+        launcher:container="-100"
+        launcher:screen="1"
+        launcher:x="3"
+        launcher:y="1"
+        launcher:spanX="1"
+        launcher:spanY="1"
+        launcher:op="insertinto"/>
+</favorites>

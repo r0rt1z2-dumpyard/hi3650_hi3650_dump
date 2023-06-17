@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2014 Huawei Inc.
+ * Cpu Freq Config
+ *
+                TYPE                                            AVALIABLE_VALUE
+        cpu_maxprofile                    480000 807000 1018000 1306000 1517000 1805000
+        cpu_minprofile                    480000 807000 1018000 1306000 1517000 1805000
+
+        cpu_a15_maxprofile                807000 1210000 1517000 1805000 2016000 2304000
+        cpu_a15_minprofile                807000 1210000 1517000 1805000 2016000 2304000
+
+        gpu_maxprofile                    360000000 480000000 650000000 800000000 900000000
+        gpu_minprofile                    360000000 480000000 650000000 800000000 900000000
+
+        ddr_maxprofile                    120000000 240000000 360000000 533000000 667000000 960000000 1333000000
+        ddr_minprofile                    120000000 240000000 360000000 533000000 667000000 960000000 1333000000
+
+        cpu_number_max                    1,2,3,4
+        cpu_number_min                    1,2,3,4
+        cpu_a15_number_max                0,1,2,3,4
+        cpu_a15_number_min                0,1,2,3,4
+        ipa_temp
+        ipa_power
+        ipa_switch
+        fork_on_big                0,1
+
+        note:
+        1. if policy item has not configured, it means close cpupolicy of previous scene.
+        2. policy type default value is 0, policy value default value is -1
+
+        Parent Scene
+
+        Sub Scene
+        210             input
+        267             fling touch
+        504             camera recorder
+        221             full screen camera
+        506             not full screen camera, little camera
+        246             video play
+        502             screen shot
+        238             start rotation
+        500             idle, (no touch/user activity for 10s)
+        508             speed up scene, for screen on by key power or fingerprint when screen off
+-->
+<!--
+    default scene , id must be lower than 10000
+-->
+<cpu_policy version="1">
+    <!--don't config any policy-->
+    <scenemode name="default_front" id="208">
+    </scenemode>
+
+    <!--don't config any policy-->
+    <scenemode name="screen_off" id="301">
+        <cpu_maxprofile>1517000</cpu_maxprofile>
+        <cpu_a15_maxprofile>1517000</cpu_a15_maxprofile>
+    </scenemode>
+
+
+    <scenemode name="thermal_cpu" id="251">
+        <cpu_maxprofile>-1</cpu_maxprofile>
+        <gpu_maxprofile>-1</gpu_maxprofile>
+    </scenemode>
+
+    <scenemode name="battery_low" id="319">
+        <cpu_a15_maxprofile>1210000</cpu_a15_maxprofile>
+        <eas_all>-20</eas_all>
+        <gpu_maxprofile>360000000</gpu_maxprofile>
+    </scenemode>
+
+    <scenemode name="battery_okay" id="320">
+    </scenemode>
+
+    <scenemode name="battery_critical" id="333">
+        <cpu_maxprofile>1018000</cpu_maxprofile>
+        <cpu_a15_maxprofile>1210000</cpu_a15_maxprofile>
+        <eas_all>-20</eas_all>
+        <gpu_maxprofile>240000000</gpu_maxprofile>
+    </scenemode>
+
+    <scenemode name="battery_critical_okay" id="334">
+    </scenemode>
+
+    <!--add policy to test-->
+    <scenemode name="browser_front" id="203">
+        <cpu_a15_maxprofile>1805000</cpu_a15_maxprofile>
+        <gpu_maxprofile>480000000</gpu_maxprofile>
+    </scenemode>
+
+    <!--read eboot, like baidu ebook-->
+    <scenemode name="ebook_front" id="205">
+        <cpu_maxprofile>1517000</cpu_maxprofile>
+        <cpu_a15_maxprofile>1805000</cpu_a15_maxprofile>
+        <eas_all>-10</eas_all>
+    </scenemode>
+
+    <scenemode name="game3d_front" id="204">
+        <gpu_maxprofile>800000000</gpu_maxprofile>
+    </scenemode>
+
+    <scenemode name="office_front" id="225">
+        <cpu_a15_maxprofile>1210000</cpu_a15_maxprofile>
+        <gpu_maxprofile>360000000</gpu_maxprofile>
+    </scenemode>
+
+    <scenemode name="video_front" id="228">
+      <cpu_maxprofile>1517000</cpu_maxprofile>
+      <cpu_a15_maxprofile>1805000</cpu_a15_maxprofile>
+    </scenemode>
+
+    <scenemode name="game2d_front" id="233">
+        <cpu_a15_maxprofile>1805000</cpu_a15_maxprofile>
+        <gpu_maxprofile>650000000</gpu_maxprofile>
+    </scenemode>
+
+    <scenemode name="launcher_front" id="230">
+        <gpu_maxprofile>480000000</gpu_maxprofile>
+    </scenemode>
+
+    <!-- for popular map-->
+    <scenemode name="com.baidu.BaiduMap|com.mapbar.android.mapbarmap|com.autonavi.minimap|com.google.android.apps.maps|cld.navi.mainframe|com.google.android.street|com.sogou.map.android.maps|com.google.earth|cn.com.tiros.android.navidog|com.tencent.map|cn.com.tiros.android.navidog4x|com.j.locationalarm|com.uu.uunavi|com.cjq.wxmap|com.pdager.navi|hw.Guider|com.telenav.app.android.cmcc|menion.android.locus.pro|com.PaPaGOShanghai|com.autonavi.xmgd.navigator" id="10001">
+        <cpu_maxprofile>1306000</cpu_maxprofile>
+        <cpu_a15_maxprofile>1805000</cpu_a15_maxprofile>
+    </scenemode>
+   <scenemode name="com.UCMobile" id="10004">
+        <cpu_maxprofile>1517000</cpu_maxprofile>
+        <eas_all>-10</eas_all>
+        <cpu_a15_maxprofile>1805000</cpu_a15_maxprofile>
+        <gpu_maxprofile>480000000</gpu_maxprofile>
+    </scenemode>
+
+       <!-- for weibo/qqmobile/weixin -->
+    <scenemode name="com.sina.weibo|com.tencent.mobileqq|com.taobao.taobao|com.eg.android.AlipayGphone|com.jingdong.app.mall|com.tmall.wireless" id="10010">
+        <cpu_a15_maxprofile>2016000</cpu_a15_maxprofile>
+        <cpu_maxprofile>1517000</cpu_maxprofile>
+        <delay_time>1500</delay_time>
+        <gpu_maxprofile>480000000</gpu_maxprofile>
+    </scenemode>
+
+    <!-- for weixin, extra boost-->
+    <scenemode name="com.tencent.mm" id="10011">
+        <cpu_maxprofile>1517000</cpu_maxprofile>
+        <cpu_a15_maxprofile>2016000</cpu_a15_maxprofile>
+        <gpu_maxprofile>480000000</gpu_maxprofile>
+     </scenemode>
+    <!--  for cld navigation-->
+    <scenemode name="cld.navi.mainframe" id="10014">
+        <cpu_a15_maxprofile>1517000</cpu_a15_maxprofile>
+    </scenemode>
+
+   <scenemode name="com.tencent.clover|com.supercell.boombeach.HUAWEI|com.netease.mobimail" id="10016">
+         <cpu_maxprofile>1306000</cpu_maxprofile>
+         <cpu_a15_maxprofile>1805000</cpu_a15_maxprofile>
+         <eas_all>-10</eas_all>
+    </scenemode>
+
+    <scenemode name="com.tencent.tmgp.speedmobile|com.netease.hyxd*|com.tencent.tmgp.sgame|com.happyelements.AndroidAnimal|com.tencent.tmgp.pubgmhd|com.tencent.tmgp.pubgm|com.netease.onmyoji*|com.miHoYo.bh3*|com.m37.yhjyj.HUAWEI|com.dygame.fight" id="10018">
+        <cpu_a15_maxprofile>1805000</cpu_a15_maxprofile>
+    </scenemode>
+    <!-- for weakTouchApp -->
+     <scenemode name="com.tencent.weread|com.codoon.gps|com.huawei.health|cn.ledongli.ldl|co.runner.app|com.edcsc.wbus|com.gotokeep.keep|com.yuedong.sport|so.ofo.labofo|com.mobike.mobikeapp|com.viyhav.moye|com.sdu.didi.psnger|com.ubercab|com.didi.echo|com.mygolbs.mybus|com.olacabs.customer|fm.qingting.qtradio|com.android.mms|com.ss.android.ugc.aweme" id="10019">
+         <cpu_maxprofile>1306000</cpu_maxprofile>
+         <cpu_a15_maxprofile>1805000</cpu_a15_maxprofile>
+         <gpu_maxprofile>480000000</gpu_maxprofile>
+         <delay_time>1500</delay_time>
+    </scenemode>
+    <!-- for TopApp-->
+    <scenemode name="com.ss.android.ugc.live|com.immomo.momo|com.xunmeng.pinduoduo|com.taobao.idlefish|com.wallstreetcn.news|com.sankuai.meituan|com.kugou.android|com.mt.mtxx.mtxx|com.dianping.v1|ctrip.android.view|com.moji.mjweather|com.baidu.netdisk|com.letv.android.client|cn.kuwo.player|com.tencent.karaoke|com.ximalaya.ting.android|com.cubic.autohome|com.hexin.plat.android|me.ele|com.netease.cloudmusic|com.sankuai.meituan.takeoutnew|com.duowan.mobile|com.baidu.lbs.waimai|bubei.tingshu|com.changba|com.ss.android.essay.joke|fm.xiami.main|com.zhihu.android|com.maimiao.live.tv|com.cmcc.migutvtwo|com.huajiao|android.zhibo8|com.sina.news|com.gameabc.zhanqiAndroid|com.smile.gifmaker|com.ifeng.news2|air.tv.douyu.android|com.duowan.kiwi|com.longzhu.tga|com.myzaker.ZAKER_Phone|com.netease.newsreader.activity|com.panda.videoliveplatform|com.ss.android.article.news|com.tencent.news|com.baidu.searchbox|com.tencent.qqmusic|com.android.mms| com.android.contacts|com.qqgame.hlddz|com.android.incallui" id="10020">
+         <cpu_maxprofile>1517000</cpu_maxprofile>
+         <cpu_a15_maxprofile>1805000</cpu_a15_maxprofile>
+         <gpu_maxprofile>480000000</gpu_maxprofile>
+         <delay_time>2500</delay_time>
+     </scenemode>
+    <scenemode name="com.andromeda.androbench*" id="10021">
+        <cpu_minprofile>1517000</cpu_minprofile>
+        <cpu_a15_minprofile>2016000</cpu_a15_minprofile>
+        <gpu_minprofile>900000000</gpu_minprofile>
+        <ddr_minprofile>933000000</ddr_minprofile>
+        <eas_all>40</eas_all>
+    </scenemode>
+</cpu_policy>

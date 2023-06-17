@@ -1,0 +1,4 @@
+/product/app/HwFidoAsm/HwFidoAsm.apk
+/product/app/HwFidoClient/HwFidoClient.apk
+/product/app/HwSmartShot/HwSmartShot.apk,priv
+/product/app/HwRemoteController/HwRemoteController.apk

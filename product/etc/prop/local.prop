@@ -1,0 +1,354 @@
+#############################################################################
+########"      __        __               _                     "############
+########"      \ \      / /_ _ _ __ _ __ (_)_ __   __ _         "############
+########"       \ \ /\ / / _` | '__| '_ \| | '_ \ / _` |        "############
+########"        \ V  V / (_| | |  | | | | | | | | (_| |        "############
+########"         \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |        "############
+########"                                         |___/         "############
+########"                                                       "############
+########"   ONLY DRIVER PROPS ALLOWED IN THIS SECTION BEGIN     "############
+########"                                                       "############
+########"                                                       "############
+########"   ONLY DRIVER PROPS ALLOWED IN THIS SECTION END       "############
+#############################################################################
+
+#############################################################################
+########"      __        __               _                     "############
+########"      \ \      / /_ _ _ __ _ __ (_)_ __   __ _         "############
+########"       \ \ /\ / / _` | '__| '_ \| | '_ \ / _` |        "############
+########"        \ V  V / (_| | |  | | | | | | | | (_| |        "############
+########"         \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |        "############
+########"                                         |___/         "############
+########"                                                       "############
+########"   ONLY PROTOCOL PROPS ALLOWED IN THIS SECTION BEGIN   "############
+#DTS2016072603065 lidandi/lwx378724 20160727 begin
+ro.com.android.dataroaming=false
+#DTS2016072603065 lidandi/lwx378724 20160727 end
+#DTS2016061205417 pengkelin/pwx307511 20160630 delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 begin
+#delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 end
+persist.sys.dualcards=true
+ril.hw_modem0.rssi=-1
+ril.hw_modem1.rssi=-1
+#DTS2016051108751  yinlianyao/WX243023 20160512 begin
+#delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 end
+ro.config.hw_ecclist_nocard=1+110,6+119,8+118
+ro.config.hw_ecclist_withcard=1+110,6+119,8+118
+ro.config.hw_globalEcc=true
+#DTS2016061205417 pengkelin/pwx307511 20160705 delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 begin
+#delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 end
+ro.ril.ecclist=112,911,#911,*911
+#ro.config.hw_voicemail_sim=true
+ro.check.modem_network=true
+ro.config.ipv4.mtu=1400
+ro.config.hw_hotswap_on=true
+ro.config.hw_student_mode_on=true
+#DTS2016100600616  wufan/WX271203 20161008 begin
+persist.radio.apm_sim_not_pwdn=1
+#DTS2016100600616  wufan/WX271203 20161008 end
+########"                                                       "############
+########"                                                       "############
+########"   ONLY PROTOCOL PROPS ALLOWED IN THIS SECTION END     "############
+#############################################################################
+
+
+
+#############################################################################
+########"      __        __               _                     "############
+########"      \ \      / /_ _ _ __ _ __ (_)_ __   __ _         "############
+########"       \ \ /\ / / _` | '__| '_ \| | '_ \ / _` |        "############
+########"        \ V  V / (_| | |  | | | | | | | | (_| |        "############
+########"         \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |        "############
+########"                                         |___/         "############
+########"                                                       "############
+########"   ONLY APP TEAM PROPS ALLOWED IN THIS SECTION BEGIN   "############
+#####################################################################################
+######## 1.APP MANUFACTURE TEAM BEGIN
+###########1.1.MMI BEGIN
+
+###########1.1.MMI END
+
+###########1.2.PROJECT MENU BEGIN
+
+###########1.2.PROJECT MENU END
+
+###########1.3.RUN IN TEST BEGIN
+
+###########1.3.RUN IN TEST END
+######## 1.APP MANUFACTURE TEAM END
+#####################################################################################
+######## 2.BASEAPP TEAM BEGIN
+#DTS2016051108751  yinlianyao/WX243023 20160512 begin
+#delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 end
+ro.config.hw_showTestInfo=true
+
+ro.config.hw_higeo_map_matching=1
+ro.config.hw_higeo_pdrsupport=true
+ro.config.hw_higeo_nw_pos_db=NA
+ro.config.hw_higeo_fusion_ver=1.5
+
+ro.config.app_big_icon_size=161
+ro.config.launcher_matchcard=0
+
+keyguard.no_require_sim=true
+ro.config.hwft_PinPukUnlockscr=true
+
+ro.config.carkitmodenotif=true
+#DTS2016071204328 xiaodi/wx239746 20160712 delete
+ro.config.hw_sim2airplane=true
+ro.config.support_ca=true
+
+modify_ram_show=true
+ro.config.hw_glovemode_enabled=1
+ro.config.readBtAddress=true
+ro.config.show2846=true
+
+#DTS2016051108751  yinlianyao/WX243023 20160512 begin
+#delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 end
+ro.config.hw_gps_power_track=true
+ro.config.hw_smartcardservice=true
+#DTS2016051108751  yinlianyao/WX243023 20160512 begin
+#delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 end
+ro.config.hw_support_geofence=true
+ro.config.hw_touchplus_enabled=false
+ro.dual.sim.phone=true
+#DTS2016071204328 xiaodi/wx239746 20160712 delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 begin
+#delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 end
+ro.config.wind_noise_supp=true
+ro.config.virtual_hd_voice=true
+
+
+#DTS2016051108751  yinlianyao/WX243023 20160512 begin
+#delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 end
+#ro.config.linkplus.roaming=true
+
+#DTS2016061205417 pengkelin/pwx307511 20160613 delete
+#DTS2016071204328 xiaodi/wx239746 20160712 delete
+
+#DTS2016071204328 xiaodi/wx239746 20160712 begin
+ro.config.DelaySwitchUserDlg=true
+ro.huawei.multiwindow=true
+#DTS2016071204328 xiaodi/wx239746 20160712 end
+ro.hwcamera.use.videosize.1080p=true
+ro.config.linkplus.liveupdate=true
+#DTS2016061205417 pengkelin/pwx307511 20160711 delete
+ro.config.finger_joint=true
+ro.config.marketing_name=HUAWEI Mate 8
+#DTS2018051108500 xuzhiwu/wx339278 20180514 begin
+ro.config.hw_wifi_proxy=false
+#DTS2018051108500 xuzhiwu/wx339278 20180514 end
+#DTS2016072810786 fushengbo/wx333857 20160728 begin 
+ro.config.notification_sound=Bongo.ogg
+#DTS2016072810786 fushengbo/wx333857 20160728 end
+#BEGIN PN: DTS2016110106031 Added by dwx334042, 2016/11/09
+ro.config.hw_privacySpace=false
+#END PN: DTS2016110106031 Added by dwx334042, 2016/11/09
+#DTS2016120702851 xiaodi/wx239746 20161223 begin
+ro.config.hw_cover_brightness=0
+#DTS2016120702851 xiaodi/wx239746 20161223 end
+# AR000ABJ8C   nizhongxing/wx391354 20180314 begin
+ro.config.show_auto_brightness=true
+# AR000ABJ8C  nizhongxing/wx391354 20180314  end
+# AR000ABJ9C   nizhongxing/wx391354 20180315 begin
+ro.config.dropdown_on_keyguard=false
+# AR000ABJ9C   nizhongxing/wx391354 20180315  end
+# AR000ABJ84 fangyunzhong/wx231527 20180317 begin
+ro.config.auto_display_mode=false
+# AR000ABJ84 fangyunzhong/wx231527 20180317 end
+# AR000ABJ9E Added by dwx334042 2018/03/30 begin
+ro.config.gameassist=1
+# AR000ABJ9E Added by dwx334042 2018/03/30 end
+######## 2.BASEAPP TEAM END
+#####################################################################################
+######## 3.MULTI-MEDIA TEAM BEGIN
+audioril.lib=libhuawei-audio-ril.so
+ro.config.hw_dts=true
+ro.config.hw_media_flags=3
+ro.config.widevine_level3=true
+drm.service.enabled=true
+ro.hwcamera.BackPanoPreSize=960x720
+#DTS2016112407085 zhangyong/wx276325 20161129 begin
+ro.hwcamera.gps_request_delay=45
+#DTS2016112407085 zhangyong/wx276325 20161129 end
+#DTS2016112502466 zengcheng/00290228 20161128 begin
+ro.hwcamera.SuperNightCapSize=3264x2448
+ro.hwcamera.LightPaintCapSize=3264x2448
+#DTS2016112502466 zengcheng/00290228 20161128 end
+#DTS2017051901276 menghaizhan/00349496, 20170519 begin
+ro.config.audioEffectForRing=true
+#DTS2017051901276 menghaizhan/00349496, 20170519 end
+# AR0009F6OD zhaojun 00185971 20170713 begin
+ro.hwcamera.livephoto_enable=true
+# AR0009F6OD zhaojun 00185971 20170713 end
+#AR000ABIJ6 w00425134 20180320 begin
+ro.features_preserved_6.0=true
+#AR000ABIJ6 w00425134 20180320 end
+######## 3.MULTI-MEDIA TEAM END
+#####################################################################################
+######## 4.FRAMEWORK TEAM BEGIN
+#fw.max_users=4
+#fw.show_multiuserui=1
+#DTS2018031909139 qwx446148 20180319 begin
+ro.readfastboot=0
+#DTS2018031909139 qwx446148 20180319 end
+#DTS2016051108751  yinlianyao/WX243023 20160512 begin
+#delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 end
+#DTS2016092007147 fushengbo wx333857 20160920 delete ro.config.ringtone
+ro.config.hw_allow_ums_and_mtp=true
+ro.config.huawei_smallwindow=17,18,1064,1330
+#ro.config.hw_pic_limit_size=50
+#DTS2016051108751 chenwei/WX234340 20160628 begin
+#delete ro.config.enable_rms
+#DTS2016051108751 chenwei/WX234340 20160628 end
+#DTS2016021607917 lixin/WX308203 20160406 begin
+ro.config.small_cover_size=_1047x1312
+#DTS2016021607917 lixin/WX308203 20160406 end
+#DTS2016082503431 AR00045EBL l00350313 20160825 begin
+ro.product.fingerprintName=HUAWEI-Z100
+#DTS2016082503431 AR00045EBL l00350313 20160825 end
+# DTS2018042410657 yubin/00355836 20180502 begin
+ro.config.hw_backupPin_exist=true
+# DTS2018042410657 yubin/00355836 20180502 end
+#DTS2018032108042  z00181854 20180411 begin
+ro.config.upgrade_clean_notify=true
+#DTS2018032108042  z00181854 20180411 end
+######## 4.FRAMEWORK TEAM END
+#####################################################################################
+######## 5.DATA SERVICE TEAM BEGIN
+#DTS2016051108751  yangying/WX283924 20160517 begin
+#DTS2016051108751 chenwei/WX234340 20160628 begin
+#delete ro.config.lvm_mode
+#delete ro.config.hw_enable_merge
+#DTS2016051108751 chenwei/WX234340 20160628 end
+#DTS2016051108751  yangying/WX283924 20160517  end
+#DTS2016051108751 chenwei/wx234340 20160512 delete ro.config.hw_power_saving
+######## 5.DATA SERVICE TEAM END
+#####################################################################################
+######## 6.APPLET TEAM BEGIN
+
+######## 6.APPLET TEAM END
+#####################################################################################
+######## 7.PRODUCT INFO BEGIN
+ro.build.hide.matchers=NXT;nxt;hi3650;huawei;mali-t880
+ro.build.hide.replacements=X100;X100;X100;unknown;unknown;
+ro.build.hide.settings=8;1.8 GHz;2.0GB;11.00 GB;16.00 GB;1080 x 720;4.4;3.10.30;4.1
+ro.product.manufacturer=HUAWEI
+######## 7.PRODUCT INFO END
+#####################################################################################
+#DTS2018041910896 qwx406689 20180419 begin
+ro.config.hw_pg_frz_all=true
+#DTS2018041910896 qwx406689 20180419 end
+#AR000AMLPM gwx290074 begin
+ro.config.hw_charge_frz=true
+#AR000AMLPM gwx290074 end
+#AR000ABJ7P qwx406689 20180323 begin
+ro.config.wifi_turn_off=true
+#AR000ABJ7P qwx406689 20180323 end
+#DTS2017072608382 qianweiqiang/qWX406689 20170727 begin
+ro.config.hw_restrict_gps=true
+#DTS2017072608382 qianweiqiang/qWX406689 20170727 end
+ro.config.enable_thermal_bdata=true
+#DTS2018032202576  qwx406689 20180323 begin
+ro.config.upgrade_appkill=true
+#DTS2018032202576  qwx406689 20180323 end
+# AR000ABJ7D yaomin/00293341 20180326 begin
+ro.config.wifi_fast_bss_enable=true
+# AR000ABJ7D yaomin/00293341 20180326 end
+#DTS2017110606835 Added by maxiaohui wx396830 begin
+persist.sys.iaware.cpuenable=false
+ro.config.hw_pg_cpu_enable=true
+#DTS2017110606835 Added by maxiaohui wx396830 end
+########"                                                       "############
+########"                                                       "############
+########"   ONLY APP TEAM PROPS ALLOWED IN THIS SECTION END     "############
+#############################################################################
+#ro.build.display.id=deleted
+#ro.build.version.incremental=deleted
+#ro.build.description=deleted
+#ro.build.fingerprint=deleted
+
+#DTS2016030301316 gwx309447 20160310 begin
+ro.hwcamera.voicereg.threshold=38,31,-40
+#DTS2016030301316 gwx309447 20160310 end
+#DTS2016051802803 gwx309447 20160520 begin
+ro.hwcamera.BackSnapShotLimit=true
+#DTS2016051802803 gwx309447 20160520 end
+
+# DTS2018050703467 Disable it for product,f00403433 2018/06/01 begin
+ro.config.systemui.hwwidget=false
+# DTS2018050703467 f00403433 2018/06/01 end
+
+#DTS2016041600608 l00278866 20160416 begin
+#DTS2016051108751 yuchao/WX333352 20160512 begin
+#DTS2016051702407 gwx309447 20160613 begin
+ro.config.small.previewpos=right
+#DTS2016051702407 gwx309447 20160613 end
+#DTS2016090603132 lwx240168 20160910 begin
+ro.config.colorTemperature_3d=true
+ro.config.colorTemperature_K3=true
+#DTS2016090603132 lwx240168 20160910 end
+#DTS2016051108751 yuchao/WX333352 20160512 end
+#DTS2016041600608 l00278866 20160416 end
+
+ro.product.brand=HUAWEI
+ro.product.device=HWNXT
+ro.product.board=NXT
+ro.product.name=NXT
+ro.build.id=HUAWEINXT
+ro.product.model=NXT
+# ro.build.product is obsolete; use ro.product.device
+ro.build.product=NXT
+ro.build.hide=false
+#DTS2016111407661 zhuxiaogang zwx354275 2016/11/14 begin
+#delete ro.setupwizard.mode
+#DTS2016111407661 zhuxiaogang zwx354275 2016/11/14 end
+ro.config.mm_socket_ctrl=1
+# DTS2016090610159 hwx240167 20160907 begin
+ro.config.hw_watermark=false
+# DTS2016090610159 hwx240167 20160907 end
+# DTS2016082511309 qwx284555 20160826 begin
+ro.config.limit_lcd_manual=true
+# DTS2016082511309 qwx284555 20160826 end
+ro.config.pg_min_ratio=80
+# DTS2016110906408 lindawei/00399276 20161109 begin
+ro.sys.fw.bg_apps_limit=36
+ro.sys.fw.empty_app_percent=67
+ro.sys.fw.trim_cache_percent=100
+ro.sys.fw.trim_empty_percent=100
+ro.sys.fw.trim_enable_memory=4294967296
+ro.sys.fw.use_trim_settings=true
+# DTS2016110906408 lindawei/00399276 20161109 end
+# DTS2017010302842 qwx406689 20170103 begin
+ro.config.hw_protect_iwa_apps=false
+# DTS2017010302842 qwx406689 20170103 end
+#AR000ABICC mwx396830 20180409 bengin
+sys.refresh.dirty=1
+#AR000ABICC mwx396830 20180409 end
+#AR000ABJ88 wwx275967 20180314 bengin
+ro.config.support_sdcard_crypt=false
+#AR000ABJ88 wwx275967 20180314 end
+# AR000ABIJ8 zhuxiaogang/wx354275 20180321 begin
+ro.config.hw_hiboard_manage=true
+# AR000ABIJ8 zhuxiaogang/wx354275 20180321 end
+#AR000ABJ7G wwx432034 20180330 begin
+ro.config.ota_update_theme=8
+#AR000ABJ7G wwx432034 20180330 end
+#AR000AE034 zhangweiwei/00214393 20180402 begin
+ro.product.first_api_level=23
+#AR000AE034 zhangweiwei/00214393 20180402 end
+#AR000AKHVA yubin/00355836 20180614 bengin
+ro.config.hw_fakebattery_warning=true
+#AR000AKHVA yubin/00355836 20180614 end
+
+ro.comp.product_version=Product-NXT 8.0.0.5(0000)

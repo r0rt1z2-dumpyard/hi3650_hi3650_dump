@@ -1,0 +1,11 @@
+/data/dataapp/WPS/WPS.apk
+/data/dataapp/Facebook/Facebook.apk
+/data/dataapp/HwVmall/HwVmall.apk
+/data/dataapp/HwWallet/HwWallet.apk
+/data/dataapp/GameBox/GameBox.apk
+/data/dataapp/HwRemoteAssistant/HwRemoteAssistant.apk
+/data/dataapp/HwPhoneDiagnose/HwPhoneDiagnose.apk
+/data/dataapp/HwHealthPlatform/HwHealthPlatform.apk
+/data/dataapp/HwLives/HwLives.apk
+/data/dataapp/Twitter/Twitter.apk
+/data/dataapp/HwReader/HwReader.apk

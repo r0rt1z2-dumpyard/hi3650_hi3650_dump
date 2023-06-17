@@ -1,0 +1,128 @@
+#############################################################################
+########"      __        __               _                     "############
+########"      \ \      / /_ _ _ __ _ __ (_)_ __   __ _         "############
+########"       \ \ /\ / / _` | '__| '_ \| | '_ \ / _` |        "############
+########"        \ V  V / (_| | |  | | | | | | | | (_| |        "############
+########"         \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |        "############
+########"                                         |___/         "############
+########"                                                       "############
+########"   ONLY DRIVER PROPS ALLOWED IN THIS SECTION BEGIN     "############
+
+
+########"                                                       "############
+########"                                                       "############
+########"   ONLY DRIVER PROPS ALLOWED IN THIS SECTION END       "############
+#############################################################################
+
+#############################################################################
+########"      __        __               _                     "############
+########"      \ \      / /_ _ _ __ _ __ (_)_ __   __ _         "############
+########"       \ \ /\ / / _` | '__| '_ \| | '_ \ / _` |        "############
+########"        \ V  V / (_| | |  | | | | | | | | (_| |        "############
+########"         \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |        "############
+########"                                         |___/         "############
+########"                                                       "############
+########"   ONLY PROTOCOL PROPS ALLOWED IN THIS SECTION BEGIN   "############
+#DTS2016061205417 pengkelin/pwx307511 20160630 delete
+persist.sys.dualcards=false
+#DTS2016061205417 pengkelin/pwx307511 20160630 delete
+########"                                                       "############
+########"                                                       "############
+########"   ONLY PROTOCOL PROPS ALLOWED IN THIS SECTION END     "############
+#############################################################################
+
+
+
+#############################################################################
+########"      __        __               _                     "############
+########"      \ \      / /_ _ _ __ _ __ (_)_ __   __ _         "############
+########"       \ \ /\ / / _` | '__| '_ \| | '_ \ / _` |        "############
+########"        \ V  V / (_| | |  | | | | | | | | (_| |        "############
+########"         \_/\_/ \__,_|_|  |_| |_|_|_| |_|\__, |        "############
+########"                                         |___/         "############
+########"                                                       "############
+########"   ONLY APP TEAM PROPS ALLOWED IN THIS SECTION BEGIN   "############
+#####################################################################################
+######## 1.APP MANUFACTURE TEAM BEGIN
+###########1.1.MMI BEGIN
+
+###########1.1.MMI END
+
+###########1.2.PROJECT MENU BEGIN
+
+###########1.2.PROJECT MENU END
+
+###########1.3.RUN IN TEST BEGIN
+
+###########1.3.RUN IN TEST END
+######## 1.APP MANUFACTURE TEAM END
+#####################################################################################
+######## 2.BASEAPP TEAM BEGIN
+#DTS2016061205417 pengkelin/pwx307511 20160616 delete
+#DTS2016061205417 pengkelin/pwx307511 20160630 delete
+ro.config.hw_ReduceSAR=true
+#DTS2016102512232 fangyunzhong/wx231527 20161027 delete
+#DTS2016061205417 pengkelin/pwx307511 20160630 delete
+ro.config.hw_nfc_msimce=false
+ro.config.hw_hotswap_on=true
+ro.config.hw_showTestInfo=false
+#DTS2016051108751 chenwei/WX234340 20160628 begin
+ro.config.hw_lte_support=true
+#delete ro.config.soundtrigger_enabled
+#DTS2016051108751 chenwei/WX234340 20160628 end
+ro.dual.sim.phone=false
+ro.config.hw_sim2airplane=false
+ro.frp.pst=/dev/block/platform/hi_mci.0/by-name/frp
+ro.config.linkplus.roaming=false
+######## 2.BASEAPP TEAM END
+#####################################################################################
+######## 3.MULTI-MEDIA TEAM BEGIN
+ro.config.hw.security_volume=8
+######## 3.MULTI-MEDIA TEAM END
+#####################################################################################
+######## 4.FRAMEWORK TEAM BEGIN
+#DTS2016051108751  yinlianyao/WX243023 20160512 begin
+#delete
+#DTS2016051108751  yinlianyao/WX243023 20160512 end
+ro.config.spare_ntp_server=ntp.sjtu.edu.cn,time.windows.com,time.nist.gov,1.cn.pool.ntp.org
+ro.config.wifi_reduce_power=true,17,12,12
+######## 4.FRAMEWORK TEAM END
+#####################################################################################
+######## 5.DATA SERVICE TEAM BEGIN
+
+######## 5.DATA SERVICE TEAM END
+#####################################################################################
+######## 6.APPLET TEAM BEGIN
+
+######## 6.APPLET TEAM END
+#####################################################################################
+######## 7.PRODUCT INFO BEGIN
+ro.product.hardwareversion=HL1UNEXTM
+######## 7.PRODUCT INFO END
+#####################################################################################
+########"                                                       "############
+########"                                                       "############
+########"   ONLY APP TEAM PROPS ALLOWED IN THIS SECTION END     "############
+#############################################################################
+#DTS2016061205417 pengkelin/pwx307511 20160621 delete
+ro.config.hw_channel_info=0,0,0,0
+#DTS2015113008324 hujiabing/203826 20151208 begin
+#DTS2016051108751 chenwei/WX234340 20160628 begin
+#delete ro.config.enable_rms
+#DTS2016051108751 chenwei/WX234340 20160628 end
+#DTS2015113008324 hujiabing/203826 20151208 end
+#AR0003J4R2 zhangfang zWX207092 20160113 begin
+ro.config.cbs_del_2B=true
+#AR0003J4R2 zhangfang zWX207092 20160113 end
+#DTS2016013001100 wangning/00227088 20160130 begin
+#DTS2016051108751 chenwei/WX234340 20160628 begin
+#delete ro.config.hw_use_browser_ua
+#DTS2016061205417 pengkelin/pwx307511 20160630 delete
+#DTS2016051108751 chenwei/WX234340 20160628 end
+#DTS2016013001100 wangning/00227088 20160130 end
+#DTS2016072601018 yanyongjun/00293352 20160727 begin 
+ro.config.hw_nfc_on=true
+#DTS2016072601018 yanyongjun/00293352 20160727 end
+ro.product.name=NXT-L09
+ro.build.id=HUAWEINXT-L09
+ro.product.model=NXT-L09
