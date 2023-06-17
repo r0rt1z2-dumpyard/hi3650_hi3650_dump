@@ -1,0 +1,4 @@
+#!/vendor/bin/sh
+
+exec -- /vendor/bin/modprobe -a -d /vendor/lib/modules \
+       dev_wifi.ko bcmdhd.ko wlanfty.ko

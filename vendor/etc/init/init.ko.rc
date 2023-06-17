@@ -1,0 +1,34 @@
+on early-init
+
+on init
+
+on early-fs
+
+on fs
+
+on post-fs
+#	exec u:r:modprobe:s0 -- /system/bin/modprobe -a -d /vendor/lib/modules \
+#		test_a_ko.ko \
+#		test_b_ko.ko
+
+#Bluetooth must start before wifi
+	exec u:r:modprobe:s0 -- /system/bin/modprobe -a -d /vendor/lib/modules \
+		bluetooth_power.ko bluesleep.ko dev_wifi.ko vio.ko bcmdhd.ko wlanfty.ko
+
+	exec u:r:modprobe:s0 -- /system/bin/modprobe -a -d /vendor/lib/modules \
+		smartpakit.ko smartpakit_i2c.ko
+
+#	exec u:r:modprobe:s0 -- /system/bin/modprobe -a -d /odm/lib/modules \
+#		module_a.ko \
+#		module_b.ko
+
+	exec u:r:modprobe:s0 -- /system/bin/modprobe -a -d /vendor/lib/modules \
+		pn547.ko \
+		drv2605.ko
+
+on post-fs-data
+
+on early-boot
+
+on boot
+

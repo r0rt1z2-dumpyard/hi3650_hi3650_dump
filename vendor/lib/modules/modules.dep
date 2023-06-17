@@ -1,0 +1,7 @@
+/vendor/lib/modules/vio.ko:
+/vendor/lib/modules/bluesleep.ko:
+/vendor/lib/modules/bluetooth_power.ko:
+/vendor/lib/modules/wlanfty.ko: /vendor/lib/modules/bcmdhd.ko /vendor/lib/modules/dev_wifi.ko
+/vendor/lib/modules/dev_wifi.ko:
+/vendor/lib/modules/pn547.ko:
+/vendor/lib/modules/bcmdhd.ko: /vendor/lib/modules/dev_wifi.ko

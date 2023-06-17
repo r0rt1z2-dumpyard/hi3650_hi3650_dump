@@ -1,0 +1,478 @@
+import /vendor/etc/init/charger/init.chip.usb.rc
+
+on early-init
+    # Apply strict SELinux checking of PROT_EXEC on mmap/mprotect calls.
+    write /sys/fs/selinux/checkreqprot 0
+
+    # Set the security context for the init process.
+    # This should occur before anything else (e.g. ueventd) is started.
+    setcon u:r:init:s0
+
+    start ueventd
+    start charger
+    start hwservicemanager
+    start keymaster-3-0
+
+on init
+
+
+    # Right now vendor lives on the same filesystem as system,
+    # but someday that may change.
+    symlink /system/vendor /vendor
+
+    mkdir /usb
+
+    mkdir /cust
+    mkdir /splash2
+    mkdir /3rdmodem
+    mkdir /3rdmodemnvm
+    mkdir /3rdmodemnvmbkp
+    mkdir /newsys
+    chown system system /dev/cpuctl
+    chown system system /dev/cpuctl/tasks
+
+    write /sys/module/hisi_nve/parameters/nve /dev/block/bootdevice/by-name/nvme
+    mount /tmp /tmp tmpfs
+    # change nve device visit permission
+    wait /dev/nve0
+    chmod 0640 /dev/nve0
+    write /proc/sys/vm/max_map_count 1000000
+
+
+on fs
+
+    wait /dev/block/bootdevice/by-name/oeminfo
+    start oeminfo_nvm
+    wait /dev/block/bootdevice/by-name/system
+    wait /dev/block/bootdevice/by-name/vendor
+    #mount ext4 /dev/block/bootdevice/by-name/system /newsys wait ro
+    mount ext4 /dev/block/bootdevice/by-name/splash2 /splash2 wait rw nosuid nodev context=u:object_r:splash2_data_file:s0
+    restorecon /splash2
+    chmod 775 /splash2
+    chown root system /splash2
+
+    # Remove a file to wake up anything waiting for firmware
+    trigger firmware_mounts_complete
+
+# Data Encryption start
+on property:vold.decrypt=trigger_shutdown_framework
+    class_reset server
+
+on property:vold.decrypt=trigger_load_persist_props
+    load_persist_props
+
+on property:vold.decrypt=trigger_post_fs_data
+    trigger post-fs-data
+
+on post-fs-data
+    trigger post-fs-data_hw
+# Data Encryption end
+
+on post-fs-data_hw
+    #3rdmodem VIA flashlessd service
+    mkdir /data/hwzd_logs/3rdcp-log 0775 radio radio
+    mkdir /data/nvram/md_via 0770 root radio
+
+    chmod 0660 /dev/vmodem
+    chown radio radio /dev/vmodem
+
+    #3rdmodem VIA pppd service
+    mkdir /data/pppd_via 0770 radio system
+
+	mkdir /storage
+	symlink /data/media/0 /storage/sdcard0
+	symlink /sdcard /storage/sdcard1
+    setprop vold.post_fs_data_done 1
+    chown root system /dev/ttyAMA3
+    chmod 0664 /dev/ttyAMA3
+    chown root system /dev/ttyAMA5
+    chmod 0664 /dev/ttyAMA5
+    chown root system /dev/gpstty
+    chmod 0664 /dev/gpstty
+    chown root system /proc/gps/nstandby
+    chmod 0664 /proc/gps/nstandby
+
+on early-boot_hw
+    ##recovery init.rc cooridnate with init.extmodem.rc
+    ##change start priority to early-boot stage, because rild is started on boot stage
+    ## and sometime rild is started but device file's property is NOT changed
+    #3rdmodem VIA VIACBP82D#
+    #VIA device property
+    #get uart port from DTS node viacbp82d_flashless_boot_dl_uart
+    setprop viatel.device.fls  spi.2.ttySPI
+    setprop viatel.device.at   spi.10.ttySPI
+    setprop viatel.device.data spi.0.ttySPI
+    setprop viatel.device.pcv spi.4.ttySPI
+    setprop viatel.device.gps spi.5.ttySPI
+
+    chmod 0750 /3rdmodem/
+    chmod 0750 /3rdmodemnvm/
+    chmod 0750 /3rdmodemnvmbkp/
+
+    mkdir /3rdmodemnvm/viacbp82d 0740 radio radio
+    mkdir /3rdmodemnvmbkp/viacbp82d 0740 radio radio
+
+    chmod 0740 /3rdmodem/modem_image
+    chmod 0740 /3rdmodem/modem_image/viacbp82d
+    chmod 0740 /3rdmodemnvm/viacbp82d
+    chmod 0740 /3rdmodemnvmbkp/viacbp82d
+    chmod 0640 /3rdmodem/modem_image/viacbp82d/boot.rom
+    chmod 0640 /3rdmodem/modem_image/viacbp82d/cp.rom
+    chmod 0640 /3rdmodem/modem_image/viacbp82d/fsm_df.img
+    chmod 0640 /3rdmodem/modem_image/viacbp82d/RfsTable
+    chmod 0640 /3rdmodemnvm/viacbp82d/fsm_0.img
+    chmod 0640 /3rdmodemnvm/viacbp82d/fsm_1.img
+    chmod 0640 /3rdmodemnvm/viacbp82d/fsm_cl.img
+    chmod 0640 /3rdmodemnvmbkp/viacbp82d/fsm_cl_backup.img
+
+    chown radio radio /3rdmodem/
+    chown radio radio /3rdmodem/modem_image
+    chown radio radio /3rdmodem/modem_image/viacbp82d
+    chown radio radio /3rdmodemnvm
+    chown radio radio /3rdmodemnvm/viacbp82d
+    chown radio radio /3rdmodemnvmbkp
+    chown radio radio /3rdmodemnvmbkp/viacbp82d
+    chown radio radio /3rdmodem/modem_image/viacbp82d/boot.rom
+    chown radio radio /3rdmodem/modem_image/viacbp82d/cp.rom
+    chown radio radio /3rdmodem/modem_image/viacbp82d/fsm_df.img
+    chown radio radio /3rdmodem/modem_image/viacbp82d/RfsTable
+    chown radio radio /3rdmodemnvm/viacbp82d/fsm_0.img
+    chown radio radio /3rdmodemnvm/viacbp82d/fsm_1.img
+    chown radio radio /3rdmodemnvm/viacbp82d/fsm_cl.img
+    chown radio radio /3rdmodemnvmbkp/viacbp82d/fsm_cl_backup.img
+
+    chmod 0660 /sys/devices/platform/viacbp82d_boot/state
+    chown root radio /sys/devices/platform/viacbp82d_boot/state
+    chmod 0660 /sys/devices/platform/viacbp82d_boot/modem_state
+    chown root radio /sys/devices/platform/viacbp82d_boot/modem_state
+    mkdir /data/hisi_logs/hifi_log 0755 root system
+    mkdir /data/hisi_logs/hifi_log/coredump 0755 root system
+    symlink /splash2/fac_log /data/log/fac_log
+    symlink /splash2 /log
+
+on cust_parse_action
+    cust_parse
+
+#start antenna_fpga download
+on property:sys.system.serv=up
+    write /sys/devices/platform/antennafpga.0/ice40bin_download_dir "start"
+
+on firmware_mounts_complete
+   rm /dev/.booting
+
+on property:androidboot.start_services=true
+    wait /dev/block/bootdevice/by-name/system
+    mount ext4 /dev/block/bootdevice/by-name/system /newsys wait ro
+    mount ext4 /dev/block/bootdevice/by-name/product /product wait ro
+    mount ext4 /dev/block/bootdevice/by-name/vendor /vendor wait ro
+    mount ext4 /dev/block/bootdevice/by-name/cache /cache
+    wait /dev/block/bootdevice/by-name/userdata
+    mount f2fs /dev/block/bootdevice/by-name/userdata /data nosuid nodev noatime discard,inline_data,inline_xattr
+    mount ext4 /dev/block/bootdevice/by-name/userdata /data nosuid nodev noatime wait crypt discard,noauto_da_alloc,mblk_io_submit,data=ordered
+    wait /dev/block/bootdevice/by-name/cust
+    mount ext4 /dev/block/bootdevice/by-name/cust /cust wait ro
+    write /sys/class/android_usb/android0/iManufacturer ${ro.product.manufacturer}
+    write /sys/class/android_usb/android0/iProduct ${ro.product.model}
+    mount ext4 /dev/block/bootdevice/by-name/dsp /dsp:0
+    mount ext4 /dev/block/bootdevice/by-name/splash2 /splash2 wait rw nosuid nodev context=u:object_r:splash2_data_file:s0
+    restorecon /splash2
+    chmod 775 /splash2
+    chown root system /splash2
+    mount ext4 /dev/block/bootdevice/by-name/3rdmodem /3rdmodem wait ro nosuid nodev
+    mount ext4 /dev/block/bootdevice/by-name/3rdmodemnvm /3rdmodemnvm noatime nosuid nodev
+    mount ext4 /dev/block/bootdevice/by-name/3rdmodemnvmbkp /3rdmodemnvmbkp noatime nosuid nodev
+    trigger post-fs_hw
+    trigger post-fs-data_hw
+
+    # Load properties from /system/ + /factory after fs mount. Place
+    # this in another action so that the load will be scheduled after the prior
+    # issued fs triggers have completed.
+    #trigger load_all_props_action
+
+    trigger early-boot_hw
+    trigger boot
+    setprop recovery.load_finish true
+
+on property:recovery.start_all_srv=true
+    #for the reason that init cust policy dirs
+    #trigger cust_parse_action
+    trigger cust_parse_action
+    # Load properties from /system/ + /factory after fs mount. Place
+    # this in another action so that the load will be scheduled after the prior
+    # issued fs triggers have completed.
+    trigger load_all_props_action
+    setprop sys.system.serv run
+    load_hwcust_prop_for_recovery
+    start logd
+    start atcmdserver
+    start hw_ueventd
+    start statusd
+#   start gpsdaemon
+    start smithloader
+
+on property:factory_reset.stop_srv=true
+    #stop all srv that occupy data when in factory reset
+    stop applogcat
+    stop rillogcat
+    stop sleeplogcat
+    stop gpsd_47531
+    stop gpsd_4774
+    stop lhd_4774
+
+# Data Encryption start
+on property:vold.decrypt=trigger_shutdown_framework
+    class_reset server
+
+on property:vold.decrypt=trigger_load_persist_props
+    load_persist_props
+
+on property:vold.decrypt=trigger_post_fs_data
+    trigger post-fs-data
+# Data Encryption end
+
+
+service hwservicemanager /sbin/hwservicemanager
+    user root
+    disabled
+    group root
+    seclabel  u:r:hwservicemanager:s0
+    onrestart class_reset hal
+    onrestart setprop hwservicemanager.ready false
+    writepid /dev/cpuset/system-background/tasks
+
+service keymaster-3-0 /vendor/bin/hw/android.hardware.keymaster@3.0-service
+    class early_hal
+    user system
+    group system drmrpc
+    seclabel u:r:hal_keymaster_default:s0
+
+service hdbd /sbin/hdbd --root_seclabel=u:r:su:s0 --device_banner=recovery
+    disabled
+    socket hdbd stream 660 system system
+    seclabel u:r:adbd:s0
+
+service gpsdaemon /vendor/bin/gpsdaemon
+    class late_start
+    oneshot
+
+service logd /system/bin/logd
+    socket logd stream 0666 logd logd
+    socket logdr seqpacket 0666 logd logd
+    socket logdw dgram 0222 logd logd
+    seclabel u:r:logd:s0
+    disabled
+
+# secure os tee agent
+service teecd /vendor/bin/teecd
+    disabled
+    user root
+    group root
+    seclabel u:r:tee:s0
+
+on property:ro.board.platform=hi3650
+    start teecd
+    chmod 0660 /sys/class/hw_power/charger/charge_data/iin_thermal
+    chown system system /sys/class/hw_power/charger/charge_data/iin_thermal
+    start limit_current
+
+# Used to disable USB when switching states
+on property:sys.usb.config=none && property:sys.usb.configfs=0
+    stop adbd
+    stop hdbd
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/bDeviceClass 0
+    write /sys/devices/virtual/android_usb/android0/port_mode 1
+    setprop sys.usb.state ${sys.usb.config}
+
+# init process will set usb mode depend on debug/MMI test/usb update/ship
+on property:sys.usb.config=manufacture,adb && property:sys.usb.configfs=0
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 12d1
+    write /sys/class/android_usb/android0/idProduct 107e
+    write /sys/class/android_usb/android0/iSerial ${ro.serialno}
+    write /sys/class/android_usb/f_mass_storage/luns sdcard
+    write /sys/class/android_usb/f_mass_storage/lun/file none
+    write /sys/class/android_usb/android0/f_hw_acm/hw_instances 3
+    write /sys/class/android_usb/android0/functions hw_acm,mass_storage,adb,hdb
+    write /sys/devices/virtual/android_usb/android0/port_mode 14
+    write /sys/class/android_usb/android0/enable 1
+    start adbd
+    start hdbd
+    setprop sys.usb.state ${sys.usb.config}
+
+on property:sys.usb.config=mass_storage && property:sys.usb.configfs=0
+    write /sys/class/android_usb/android0/enable 0
+    write /sys/class/android_usb/android0/idVendor 12d1
+    write /sys/class/android_usb/android0/idProduct 1037
+    write /sys/class/android_usb/android0/iSerial ${ro.serialno}
+    write /sys/class/android_usb/f_mass_storage/luns sdcard
+    write /sys/class/android_usb/f_mass_storage/lun/file none
+    write /sys/class/android_usb/android0/functions ${sys.usb.config}
+    write /sys/devices/virtual/android_usb/android0/port_mode 7
+    write /sys/class/android_usb/android0/enable 1
+    setprop sys.usb.state ${sys.usb.config}
+
+service console /system/bin/sh
+    class core
+    console
+    disabled
+    user root
+    group root
+
+on property:ro.debuggable=1
+    start console
+
+
+
+on property:sys.system.serv=run
+    class_start server
+    setprop sys.system.serv up
+service atcmdserver  /vendor/bin/atcmdserver
+    class server
+    user root
+    oneshot
+    disabled
+
+service smithloader  /vendor/bin/smithloader
+    class server
+    user root
+    disabled
+    oneshot
+    seclabel u:r:smithloader:s0
+
+service gpsd_47531  /vendor/bin/glgps47531 -c /vendor/etc/gps47531config_beta.xml
+    socket gps seqpacket 660 gps system
+    class server
+    user gps
+    oneshot
+    disabled
+    group system
+
+service gpsd_4774  /vendor/bin/glgps4774 -c /vendor/etc/gps4774config_beta.xml
+    socket gps seqpacket 660 gps system
+    class server
+    user gps
+    oneshot
+    group system inet sdcard_rw
+    disabled
+
+service lhd_4774  /vendor/bin/lhd4774  /vendor/etc/lhd_beta.conf
+    class server
+    user gps
+    oneshot
+    group system inet net_raw sdcard_rw
+    ioprio be 0
+    disabled
+
+service oeminfo_nvm /sbin/oeminfo_nvm_server
+    critical
+    ioprio rt 4
+    seclabel u:r:oeminfo_nvm:s0
+
+service hw_ueventd /sbin/hw_ueventd
+    class server
+    user root
+    disabled
+    seclabel u:r:hw_ueventd:s0
+
+#limit current
+service limit_current /system/bin/limit_current -r
+    class server
+    user root
+    oneshot
+    seclabel u:r:limit_current:s0
+    disabled
+
+#3rdmodem VIA statusd service
+service statusd /vendor/bin/statusd -f [/vendor/bin/flashlessd -m 0]
+    class server
+    user root
+    group radio cache inet misc system
+    disabled
+
+service logctl_service /sbin/logctl_service -m 2
+    class server
+    user root
+    oneshot
+    seclabel u:r:logctlservice:s0
+
+service logcat_service /sbin/logctl_service -m 2 -t 1
+    class server
+    user root
+    oneshot
+    seclabel u:r:logctlservice:s0
+
+service fac_log_service /system/vendor/bin/factory_log_service -m 2
+    class server
+    user root
+    disabled
+    oneshot
+    seclabel u:r:faclogservice:s0
+
+service modemlogcat  /vendor/bin/modemlogcat_lte -l
+    class server
+    disabled
+    oneshot
+
+service modemlogcat_VIA /vendor/bin/modemlogcat_via -t /dev/ttySPI1 -p /data/log/cp_log/ -r 30 -n 9
+    class server
+    disabled
+    oneshot
+
+service applogcat /system/bin/logcat -v threadtime -r4096 -z 10 -n 5 -f /data/android_logs/applogcat-log
+    class server
+    user root
+    disabled
+    seclabel u:r:glogcat:s0
+
+service rillogcat /system/bin/logcat -b radio -v threadtime -r4096 -z 5 -n 5 -f /data/android_logs/rillogcat-log
+    class server
+    user root
+    disabled
+    seclabel u:r:glogcat:s0
+
+service kmsglogcat /sbin/xlogcat-early -b kmsglogcat-r
+    user root
+    disabled
+    seclabel u:r:xlogcat:s0
+
+service chargelogcat /sbin/xlogcat-early -b chargelogcat-r
+    class server
+    user root
+    disabled
+    seclabel u:r:xlogcat:s0
+
+service sleeplogcat /system/bin/xlogcat -b sleeplogcat
+    class server
+    user root
+    disabled
+    seclabel u:r:xlogcat:s0
+
+service kmsgcat_cp /sbin/xlogcat-early -b kmsgcat_cp
+    class server
+    user root
+    disabled
+    seclabel u:r:xlogcat:s0
+
+service logctl_srv_updt /sbin/logctl_service -m 3
+    class server
+    user root
+    oneshot
+    disabled
+    seclabel u:r:logctlservice:s0
+
+on boot
+    write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor interactive
+    write /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor ondemand
+    write /sys/kernel/eas/capacity_margin  1024
+    write /sys/kernel/eas/sd_capacity_margin 1024
+    write /sys/kernel/eas/up_migration_util_filter 100
+
+on property:recovery.start_all_srv=false
+    start logctl_srv_updt
+
+on property:factory.recovery.prepare=start
+    setprop factory.recovery.prepare end
+
+on property:ro.runmode=factory
+    start gpsdaemon
